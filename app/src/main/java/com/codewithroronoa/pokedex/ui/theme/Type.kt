@@ -7,6 +7,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import com.codewithroronoa.pokedex.R
 import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.googlefonts.Font
+import androidx.compose.ui.text.googlefonts.GoogleFont
 
 // Set of Material typography styles to start with
 val Roboto = FontFamily(
@@ -40,4 +42,15 @@ val Typography = Typography(
         fontSize = 12.sp
     )
     */
+)
+val provider = GoogleFont.Provider(
+    providerAuthority = "com.google.android.gms.fonts",
+    providerPackage = "com.google.android.gms",
+    certificates = R.array.com_google_android_gms_fonts_certs
+)
+
+val fontName = GoogleFont("Poppins")
+
+val Lobster_two = FontFamily(
+    Font(googleFont = fontName, fontProvider = provider)
 )
